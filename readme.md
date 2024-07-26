@@ -1,6 +1,5 @@
-# Explainability Techniques for Chemical Language Models
-This repository accompanies the paper 'Explainability Techniques for Chemical Language Models' with code to reproduce the results and apply the technique to other self-attention encoder architectures.
-The original preprint can be found on Arxiv: https://arxiv.org/abs/2305.16192
+# What can Attribution Methods show us about Chemical Language Models
+This repository accompanies the paper (What can Attribution Methods show us about Chemical Language Models)[https://pubs.rsc.org/en/content/articlelanding/2024/dd/d4dd00084f] with code to reproduce the results and apply the technique to other self-attention encoder architectures.
 
 The repository uses is split into the following structure and uses DVC + Hydra to configure runs.
 ```
@@ -34,8 +33,8 @@ final/{modelname}/
 # Setup / Installation:
 ### Clone repository, build MegaMolBART docker container
 ```
-git clone https://github.com/KachmanLab/Chemical_Language_Model_Explainer.git
-cd Chemical_Language_Model_Explainer
+git clone https://github.com/BigChemistry-RobotLab/explaining_a_chemical_language_model.git
+cd explaining_a_chemical_language_model
 # pull nvidia megamolbart:v0.2 docker container, mount repo (current directory) into /workspace
 docker run \
     --gpus all \
@@ -124,14 +123,14 @@ python scripts/explain_model.py
 We acknowledge funding from the National Growth Fund project 'Big Chemistry' (1420578), funded by the Ministry of Education, Culture and Science. This project has received funding from the European Union’s Horizon 2020 research and innovation programmes under Grant Agreement No. 833466 (ERC Adv. Grant Life-Inspired). This project has received funding from a Spinoza Grant of the Netherlands Organisation for Scientific Research (NWO).
 
 ## Citation
-If you found this repository useful, please cite our preprint:
+If you found this repository useful, please cite our paper:
 ```
-@misc{hödl2023explainability,
-      title={Explainability Techniques for Chemical Language Models}, 
-      author={Stefan Hödl and William Robinson and Yoram Bachrach and Wilhelm Huck and Tal Kachman},
-      year={2023},
-      eprint={2305.16192},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@article{Hoedl2024,
+  title = {What can Attribution Methods show us about Chemical Language Models?},
+  author = {H{\"o}dl, Stefan and Kachman, Tal and Bachrach, Yoram and Huck, Wilhelm and Robinson, William},
+  journal = {Digital Discovery},
+  year = {2024},
+  publisher = {Royal Society of Chemistry},
+  doi = {https://doi.org/10.1039/D4DD00084F}
 }
 ```
